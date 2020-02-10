@@ -5,9 +5,12 @@ import Login from "./components/auth/Login";
 import NuevaCuenta from "./components/auth/NuevaCuenta";
 import Proyectos from "./components/proyectos/Proyectos";
 
+import ProyectosState from './context/proyectoState'
+
 function App() {
   return (
     <div >
+      <ProyectosState>
       <Router>
         <Switch>
           <Route exact path='/' component={Login} />
@@ -15,6 +18,7 @@ function App() {
           <Route exact path='/proyectos' component={Proyectos} />
         </Switch>
       </Router>
+      </ProyectosState>
     </div>
   );
 }
